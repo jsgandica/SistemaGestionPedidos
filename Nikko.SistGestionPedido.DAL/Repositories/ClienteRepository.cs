@@ -11,9 +11,9 @@ namespace Nikko.SistGestionPedido.DAL.Repositories
 {
     public class ClienteRepository : IGenericRepository<Cliente>
     {
-        private readonly PruebaContext _dbContext;
+        private readonly PedidosContext _dbContext;
 
-        public ClienteRepository(PruebaContext context)
+        public ClienteRepository(PedidosContext context)
         {
             _dbContext = context;        
         }

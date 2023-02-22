@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Nikko.SistGestionPedido.Models;
+
 namespace Nikko.SistGestionPedido.DAL.DataContext;
 
-public partial class PruebaContext : DbContext
+public partial class PedidosContext : DbContext
 {
-    public PruebaContext()
+    public PedidosContext()
     {
     }
 
-    public PruebaContext(DbContextOptions<PruebaContext> options)
+    public PedidosContext(DbContextOptions<PedidosContext> options)
         : base(options)
     {
     }
@@ -34,9 +35,9 @@ public partial class PruebaContext : DbContext
     public virtual DbSet<Vendedor> Vendedors { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    { 
-    
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=BLACK-LAP-8\\SQLEXPRESS;Initial Catalog=pedidos;Integrated Security=True;TrustServerCertificate=True");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>

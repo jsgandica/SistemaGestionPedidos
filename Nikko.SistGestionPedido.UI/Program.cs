@@ -22,7 +22,7 @@ builder.Services.AddScoped<IComentarioService, ComentarioService>();
 
 
 
-builder.Services.AddDbContext<PruebaContext>(option =>
+builder.Services.AddDbContext<PedidosContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection"));
 });

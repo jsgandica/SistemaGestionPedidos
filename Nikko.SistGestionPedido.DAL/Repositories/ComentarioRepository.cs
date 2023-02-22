@@ -11,9 +11,9 @@ namespace Nikko.SistGestionPedido.DAL.Repositories
 {
     public  class ComentarioRepository : IGenericRepository<Comentario>
     {
-        private readonly PruebaContext _dbContext;
+        private readonly PedidosContext _dbContext;
 
-        public ComentarioRepository(PruebaContext context)
+        public ComentarioRepository(PedidosContext context)
         {
             _dbContext = context;
         }
