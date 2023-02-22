@@ -1,0 +1,12 @@
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.deps.json
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.dll
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.pdb
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.csproj.AssemblyReference.cache
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.AssemblyInfoInputs.cache
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.AssemblyInfo.cs
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.csproj.CoreCompileInputs.cache
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.dll
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\refint\Nikko.SistGestionPedido.Models.dll
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.pdb
+C:\Users\juan.gandica\source\repos\SistGestionPedido\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\ref\Nikko.SistGestionPedido.Models.dll
