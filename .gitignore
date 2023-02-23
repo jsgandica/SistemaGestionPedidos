@@ -1,0 +1,15 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SistemaGestionPedido/FileContentIndex/ba59722b-eff4-4e01-a8b2-77d0efc9cbd7.vsidx
+/.vs/SistemaGestionPedido/FileContentIndex/9b4c1fd9-c069-4510-a078-357c2dfeb488.vsidx
+/.vs/SistemaGestionPedido/FileContentIndex/5affc343-473d-4eed-812a-9ab810dd0e81.vsidx
+/.vs/SistemaGestionPedido/FileContentIndex/4aff9783-c4f7-4b21-88e5-f30e038c97ea.vsidx
+/.vs/SistemaGestionPedido/FileContentIndex/0e9e412e-c081-4f59-a517-30f728d625b5.vsidx
+/Nikko.SistGestionPedido.DAL/obj/Debug/net6.0/Nikko.SistGestionPedido.DAL.csproj.AssemblyReference.cache
+/Nikko.SistGestionPedido.Logic/obj/Debug/net6.0/Nikko.SistGestionPedido.Logic.csproj.AssemblyReference.cache
+/Nikko.SistGestionPedido.UI/obj/staticwebassets.pack.sentinel
+/Nikko.SistGestionPedido.UI/obj/Debug/net6.0/Nikko.SistGestionPedido.UI.csproj.AssemblyReference.cache
+/.vs/SistemaGestionPedido/v17/.suo
+/.vs/SistemaGestionPedido/DesignTimeBuild/.dtbcache.v2
