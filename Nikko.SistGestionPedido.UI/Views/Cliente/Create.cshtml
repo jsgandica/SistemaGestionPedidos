@@ -1,12 +1,14 @@
 ﻿@model Nikko.SistGestionPedido.UI.Models.ViewModels.ClienteViewModel
 @{
     ViewData["Title"] = "Home Page";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.Items;/*coloque*/
 }
 
 <!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
 </head>
@@ -32,7 +34,12 @@
                     <input asp-for="Telefono" class="form-control" />
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
-
+                <div>
+                    <div class="col-md-12">
+                       Vendedor<Br/>                        
+                       @Html.DropDownList("IdVendedor", items, "Selecciona..",new {@class = "form-control"})
+                    </div>
+                </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>

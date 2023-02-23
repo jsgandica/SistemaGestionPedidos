@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Nikko.SistGestionPedido.Logic.Contracts;
 using Nikko.SistGestionPedido.Models;
 using Nikko.SistGestionPedido.UI.Models.ViewModels;
@@ -8,9 +9,11 @@ namespace Nikko.SistGestionPedido.UI.Controllers
     public class ClienteController : Controller
     {
         private readonly IClienteService _clienteService;
-        public ClienteController(IClienteService clienteService)
+        private readonly IVendedorService _vendedorService;
+        public ClienteController(IClienteService clienteService, IVendedorService vendedorService)
         {
             _clienteService= clienteService;
+            _vendedorService = vendedorService;
         }
         public async Task<IActionResult> Index(ClienteViewModel clienteViewModel)
         {
@@ -30,11 +33,27 @@ namespace Nikko.SistGestionPedido.UI.Controllers
         }
         public async Task<IActionResult> Create()
         {
-
+            IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
+            List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
+                                                             .Select(c => new VendedorViewModel()
+                                                             {
+                                                                 Id = c.Id,
+                                                                 Nombre = c.Nombre,                                                                                                                                 
+                                                             }).ToList();
+            List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
+            {
+                return new SelectListItem()
+                {
+                    Text = i.Nombre.ToString(),
+                    Value = i.Id.ToString(),
+                    Selected = false
+                };
+            });
+            ViewBag.Items = items;
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(ClienteViewModel clienteViewModel)
+        public async Task<IActionResult> Create(ClienteViewModel clienteViewModel, int IdVendedor)
         {
 
             Cliente cliente = new Cliente()
@@ -43,6 +62,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                 Nombre = clienteViewModel.Nombre,
                 Fecha = clienteViewModel.Fecha,
                 Telefono= clienteViewModel.Telefono,
+                VendedorId = IdVendedor
             };
             if (ModelState.IsValid)
             {
