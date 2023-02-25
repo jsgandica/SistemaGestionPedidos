@@ -1,6 +1,6 @@
 ﻿@model Nikko.SistGestionPedido.UI.Models.ViewModels.VendedorViewModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Home Page";
 }
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
                 @Html.DisplayNameFor(model=>model.Nombre);
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayNameFor(model=>model.Nombre);
+                @Html.DisplayFor(model=>model.Nombre);
             </dd>
         </dl>
         <form asp-action="Delete">

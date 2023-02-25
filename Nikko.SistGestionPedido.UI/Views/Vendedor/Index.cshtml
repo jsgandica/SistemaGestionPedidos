@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<Nikko.SistGestionPedido.UI.Models.ViewModels.VendedorViewModel>
 @{
-    Layout = null;
+    ViewData["Title"] = "Home Page";
 }
+
 <!DOCTYPE html>
 <html>
 
@@ -11,20 +12,16 @@
 </head>
 <body>
     <p>
-        <a asp-action="Create">Create New</a>
+        <a asp-action="Create">Ingresar Vendedor</a>
     </p>
     <table class="table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model=>model.Id)
+                   <p>Id</p>
                 </th>
                 <th>
                     @Html.DisplayNameFor(model=>model.Nombre)
-                </th>
-
-                <th>
-                    @Html.DisplayNameFor(model=>model.Rowguid)
                 </th>
                 <th>
                 </th>
@@ -34,9 +31,8 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@Html.DisplayFor(modelItem=>item.Id)</td>
-                    <td>@Html.DisplayFor(modelItem=>item.Nombre)</td>
                     <td>@Html.DisplayFor(modelItem=>item.Rowguid)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Nombre)</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
