@@ -12,7 +12,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
         private readonly IVendedorService _vendedorService;
         public ClienteController(IClienteService clienteService, IVendedorService vendedorService)
         {
-            _clienteService= clienteService;
+            _clienteService = clienteService;
             _vendedorService = vendedorService;
         }
         public async Task<IActionResult> Index(ClienteViewModel clienteViewModel)
@@ -25,11 +25,25 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                                                              Id = c.Id,
                                                              Nombre = c.Nombre,
                                                              Fecha = c.Fecha,
-                                                             Telefono= c.Telefono,
+                                                             Telefono = c.Telefono,
                                                          }).ToList();
 
 
             return View(lstClienteViewModel);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            Task<Cliente> _cliente = _clienteService.Obtener(id);
+            ClienteViewModel clienteViewModel = new ClienteViewModel()
+            {
+                Id = _cliente.Result.Id,
+                Nombre = _cliente.Result.Nombre,
+                Telefono = _cliente.Result.Telefono,
+                Fecha = _cliente.Result.Fecha
+
+            };
+            return View(clienteViewModel);
         }
         public async Task<IActionResult> Create()
         {
@@ -38,7 +52,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                                                              .Select(c => new VendedorViewModel()
                                                              {
                                                                  Id = c.Id,
-                                                                 Nombre = c.Nombre,                                                                                                                                 
+                                                                 Nombre = c.Nombre,
                                                              }).ToList();
             List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
             {
@@ -49,6 +63,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                     Selected = false
                 };
             });
+            //items.Add (new SelectListItem {Text ="Seleccione..",Value="0", Disabled=true, Selected=true });
             ViewBag.Items = items;
             return View();
         }
@@ -61,7 +76,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
 
                 Nombre = clienteViewModel.Nombre,
                 Fecha = clienteViewModel.Fecha,
-                Telefono= clienteViewModel.Telefono,
+                Telefono = clienteViewModel.Telefono,
                 VendedorId = IdVendedor
             };
             if (ModelState.IsValid)
@@ -92,7 +107,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(ClienteViewModel clienteViewModel)
         {
-            
+
             Cliente cliente = new Cliente()
             {
                 Id = clienteViewModel.Id,
@@ -120,7 +135,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                 Id = _cliente.Result.Id,
                 Nombre = _cliente.Result.Nombre,
                 Fecha = _cliente.Result.Fecha,
-                Telefono=_cliente.Result.Telefono
+                Telefono = _cliente.Result.Telefono
             };
             return View(clienteViewModel);
         }
