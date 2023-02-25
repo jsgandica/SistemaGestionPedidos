@@ -58,3 +58,12 @@
 /Nikko.SistGestionPedido.UI/bin/Debug/net6.0/Nikko.SistGestionPedido.DAL.pdb
 /Nikko.SistGestionPedido.UI/bin/Debug/net6.0/Nikko.SistGestionPedido.DAL.dll
 /.gitignore
+/.vs/SistemaGestionPedido/DesignTimeBuild/.dtbcache.v2
+*.v2
+*.suo
+*.bin
+*.vsidx
+*.lock
+*.wsuo
+*.json
+*.sqlite
