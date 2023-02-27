@@ -22,3 +22,15 @@ C:\Users\Administrador\source\repos\SistemaGestionPedidos\Nikko.SistGestionPedid
 C:\Users\Administrador\source\repos\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\refint\Nikko.SistGestionPedido.Models.dll
 C:\Users\Administrador\source\repos\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.pdb
 C:\Users\Administrador\source\repos\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\ref\Nikko.SistGestionPedido.Models.dll
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.deps.json
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.dll
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\bin\Debug\net6.0\Nikko.SistGestionPedido.Models.pdb
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.csproj.AssemblyReference.cache
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.AssemblyInfoInputs.cache
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.AssemblyInfo.cs
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.dll
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\refint\Nikko.SistGestionPedido.Models.dll
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\Nikko.SistGestionPedido.Models.pdb
+C:\Users\Administrador\Source\Repos\jsgandica\SistemaGestionPedidos\Nikko.SistGestionPedido.Models\obj\Debug\net6.0\ref\Nikko.SistGestionPedido.Models.dll

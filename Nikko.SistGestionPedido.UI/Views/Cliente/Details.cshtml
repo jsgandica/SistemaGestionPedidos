@@ -9,14 +9,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
+    <link href="~/css/clstyle.css" rel="stylesheet" />
+    <title>Details</title>
 </head>
 <body>
     <h4>Detalle de Cliente</h4>
-    <hr />
+    @*<hr />*@
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Details">
+                <fieldset>
+                    <legend>Cliente</legend>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
@@ -33,7 +36,7 @@
                     <input asp-for="Telefono" class="form-control" />
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
-
+               </fieldset>
             </form>
         </div>
     </div>

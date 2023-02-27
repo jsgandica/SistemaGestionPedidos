@@ -15,6 +15,30 @@ namespace Nikko.SistGestionPedido.UI.Controllers
             _clienteService = clienteService;
             _vendedorService = vendedorService;
         }
+        public async Task<IActionResult> PrimerCliente(ClienteViewModel clienteViewModel)
+        {
+            IQueryable<Cliente> queryClienteSQL = await _clienteService.ObtenerTodos();
+
+            List<ClienteViewModel> lstClienteViewModel = queryClienteSQL
+                                                         .Select(c => new ClienteViewModel()
+                                                         {
+                                                             Id = c.Id,
+                                                             Nombre = c.Nombre,
+                                                             Fecha = c.Fecha,
+                                                             Telefono = c.Telefono,
+                                                         }).ToList();
+            var primerCliente = (from j in lstClienteViewModel
+                                orderby j.Id ascending
+                                select j).FirstOrDefault();
+            ClienteViewModel clienteViewModel1 = new ClienteViewModel()
+            {
+                Id= primerCliente.Id,
+                Nombre= primerCliente.Nombre,
+                Fecha= primerCliente.Fecha,
+                Telefono= primerCliente.Telefono
+            };
+            return View(clienteViewModel1);
+        }
         public async Task<IActionResult> Index(ClienteViewModel clienteViewModel)
         {
             IQueryable<Cliente> queryClienteSQL = await _clienteService.ObtenerTodos();
@@ -68,6 +92,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ClienteViewModel clienteViewModel, int IdVendedor)
         {
 
@@ -86,9 +111,27 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                 return RedirectToAction("Index", "Cliente");
 
             }
+            
+            IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
+            List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
+                                                             .Select(c => new VendedorViewModel()
+                                                             {
+                                                                 Id = c.Id,
+                                                                 Nombre = c.Nombre,
+                                                             }).ToList();
+            List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
+            {
+                return new SelectListItem()
+                {
+                    Text = i.Nombre.ToString(),
+                    Value = i.Id.ToString(),
+                    Selected = false
+                };
+            });
+            //items.Add (new SelectListItem {Text ="Seleccione..",Value="0", Disabled=true, Selected=true });
+            ViewBag.Items = items;
 
-
-            return View();
+            return View("Create");
         }
         public async Task<IActionResult> Edit(int id)
         {
@@ -105,6 +148,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ClienteViewModel clienteViewModel)
         {
 
@@ -140,6 +184,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
             return View(clienteViewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id, ClienteViewModel clienteViewModel)
         {
 

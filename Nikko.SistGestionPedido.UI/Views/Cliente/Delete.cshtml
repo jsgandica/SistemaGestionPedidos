@@ -8,13 +8,16 @@
 
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/css/clstyle.css" rel="stylesheet" />
     <title>Delete</title>
 </head>
 <body>
     <h4>Eliminacion Cliente</h4>
-    <hr />
+    @*<hr />*@
     <div>
-        <h5>Cliente</h5>
+       @* <h5>Cliente</h5>*@
+        <fieldset>
+            <legend>Cliente</legend>
         <dl class="row">
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model=>model.Nombre)
@@ -36,6 +39,7 @@
                 @Html.DisplayFor(model=>model.Telefono)
             </dd>
         </dl>
+        </fieldset>
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
             <input type="submit" value="Eliminar" class="btn btn-danger" /> |
