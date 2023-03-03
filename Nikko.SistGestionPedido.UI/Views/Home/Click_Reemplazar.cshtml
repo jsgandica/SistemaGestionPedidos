@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string items = (string)ViewBag.Items;
+}
+<div class="form-group">
+    <p style="font-size: 15pt"><strong>La Fecha y Hora es: @items</strong></p>    
+    <p>Hola Usuario!!! </p>    
+</div>
+<div class="form-group">
+    <a asp-action="Click_Despues" style="text-decoration:underline">Click Despues</a>
+    <a asp-action="Click_Antes" style="text-decoration:underline">Click Antes</a>
+    <a asp-action="Click_Reemplazar" style="text-decoration:underline">Click Reemplazar</a>
+</div>

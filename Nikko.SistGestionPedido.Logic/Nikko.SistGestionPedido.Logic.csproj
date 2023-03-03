@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nikko.SistGestionPedido.DAL\Nikko.SistGestionPedido.DAL.csproj" />
+    <ProjectReference Include="..\Nikko.SistGestionPedido.Models\Nikko.SistGestionPedido.Models.csproj" />
+  </ItemGroup>
+
+</Project>
