@@ -27,7 +27,7 @@ namespace Nikko.SistGestionPedido.Unit.Test
 
         [TestMethod]
 
-        public async Task valida_insercionCliente()
+        public async void valida_insercionCliente()
         {
             // Arrancar
             Cliente _cliente = new Cliente()
@@ -46,12 +46,12 @@ namespace Nikko.SistGestionPedido.Unit.Test
         }
 
         [TestMethod]
-        public async Task valida_EdicionCliente()
+        public async void valida_EdicionCliente()
         {
             //Arrancar
             Cliente _cliente = new Cliente()
             {
-                Id = 28,
+                Id = 5,
                 Nombre = "Andres",
                 Telefono = "04128965321",
                 Fecha = DateTime.Parse("05/06/1982")
@@ -66,7 +66,7 @@ namespace Nikko.SistGestionPedido.Unit.Test
 
         [TestMethod]
 
-        public async Task valida_EliminacionCliente()
+        public async void valida_EliminacionCliente()
         {
             //Arrancar
             int id = 5;
@@ -79,7 +79,7 @@ namespace Nikko.SistGestionPedido.Unit.Test
 
         [TestMethod]
 
-        public async Task valida_ObtenerCliente()
+        public async void valida_ObtenerCliente()
         {
             //Arrancar
             int id = 4;
