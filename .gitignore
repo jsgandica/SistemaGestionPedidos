@@ -147,3 +147,5 @@
 /Nikko.SistGestionPedido.Logic/obj/Debug/net6.0/Nikko.SistGestionPedido.Logic.csproj.FileListAbsolute.txt
 /Nikko.SistGestionPedido.DAL/obj/Debug/net6.0/ref/Nikko.SistGestionPedido.DAL.dll
 /Nikko.SistGestionPedido.DAL/obj/Debug/net6.0/refint/Nikko.SistGestionPedido.DAL.dll
+/Nikko.SistGestionPedido.Unit.Test/obj/Debug/net6.0/ref/Nikko.SistGestionPedido.Unit.Test.dll
+/Nikko.SistGestionPedido.Unit.Test/obj/Debug/net6.0/refint/Nikko.SistGestionPedido.Unit.Test.dll
