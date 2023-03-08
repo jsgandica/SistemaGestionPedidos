@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Nikko.SistGestionPedido.UI.Models.ViewModels.ProveedorViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>Proveedores</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model=>model.ProveedorId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.EmpresaId)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model=>model.RazonSocial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Codigo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Contacto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.TipoProveedorId)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model=>model.Direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Correo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Plazo)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model=>model.Ruc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.ProvinciaId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.EstadoId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.TipoPersona)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model=>model.PaginaWeb)
+                </th>
+
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem=>item.ProveedorId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.EmpresaId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.RazonSocial)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Codigo)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Contacto)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.TipoProveedorId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Direccion)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Telefono)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Correo)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Plazo)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Ruc)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.ProvinciaId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.EstadoId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.TipoPersona)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.PaginaWeb)</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>

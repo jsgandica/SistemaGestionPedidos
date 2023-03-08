@@ -19,6 +19,12 @@ builder.Services.AddScoped<IVendedorService, VendedorService>();
 builder.Services.AddScoped<IGenericRepository<Comentario>, ComentarioRepository>();
 builder.Services.AddScoped<IComentarioService, ComentarioService>();
 
+builder.Services.AddScoped<IGenericRepository<Pedido>, PedidoRepository>();
+builder.Services.AddScoped<IPedidoService, PedidoService>();
+
+builder.Services.AddScoped<IGenericRepository<LineaPedido>, LineaPedidoRepository>();
+builder.Services.AddScoped<ILineaPedidoService, LineaPedidoService>();
+
 
 
 

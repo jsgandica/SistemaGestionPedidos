@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aTQ7cwDbIZmXketL4p8Rx9VgwR6IL36pigo12Ji/8JwTXGHxzmm7ETb7Q8TQxfUGeG61c+Ea+c6J+l+fJykQzg==",
+  "dgSpecHash": "ms9xXkz+rSl3DP5IpWsqdlGJdFLqW3rlQ2UnGBqUXuT0PzIUEcli8vYdEhijetMjT3pW6YAhxZCMmj9HKRedXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrador\\source\\repos\\jsgandica\\SistemaGestionPedidos\\Nikko.SistGestionPedido.Unit.Test\\Nikko.SistGestionPedido.Unit.Test.csproj",
+  "projectFilePath": "C:\\Users\\Administrador\\source\\repos\\PROYECTO_FINAL_CON_API_\\SistemaGestionPedidos\\Nikko.SistGestionPedido.Unit.Test\\Nikko.SistGestionPedido.Unit.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrador\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Nikko.SistGestionPedido.UI.Models.ViewModels.LineaPedidoViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>Listado de LineaPedido</h4>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.Cantidad)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model=>model.PedidoId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.ProductoId)
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem=>item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.Cantidad)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.PedidoId)</td>
+                    <td>@Html.DisplayFor(modelItem=>item.ProductoId)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                        @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+

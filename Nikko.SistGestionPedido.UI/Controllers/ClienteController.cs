@@ -71,29 +71,29 @@ namespace Nikko.SistGestionPedido.UI.Controllers
         }
         public async Task<IActionResult> Create()
         {
-            IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
-            List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
-                                                             .Select(c => new VendedorViewModel()
-                                                             {
-                                                                 Id = c.Id,
-                                                                 Nombre = c.Nombre,
-                                                             }).ToList();
-            List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
-            {
-                return new SelectListItem()
-                {
-                    Text = i.Nombre.ToString(),
-                    Value = i.Id.ToString(),
-                    Selected = false
-                };
-            });
-            //items.Add (new SelectListItem {Text ="Seleccione..",Value="0", Disabled=true, Selected=true });
-            ViewBag.Items = items;
+            //IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
+            //List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
+            //                                                 .Select(c => new VendedorViewModel()
+            //                                                 {
+            //                                                     Id = c.Id,
+            //                                                     Nombre = c.Nombre,
+            //                                                 }).ToList();
+            //List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
+            //{
+            //    return new SelectListItem()
+            //    {
+            //        Text = i.Nombre.ToString(),
+            //        Value = i.Id.ToString(),
+            //        Selected = false
+            //    };
+            //});
+            ////items.Add (new SelectListItem {Text ="Seleccione..",Value="0", Disabled=true, Selected=true });
+            //ViewBag.Items = items;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ClienteViewModel clienteViewModel, int IdVendedor)
+        public async Task<IActionResult> Create(ClienteViewModel clienteViewModel)
         {
 
             Cliente cliente = new Cliente()
@@ -102,7 +102,7 @@ namespace Nikko.SistGestionPedido.UI.Controllers
                 Nombre = clienteViewModel.Nombre,
                 Fecha = clienteViewModel.Fecha,
                 Telefono = clienteViewModel.Telefono,
-                VendedorId = IdVendedor
+                //VendedorId = IdVendedor
             };
             if (ModelState.IsValid)
             {
@@ -112,24 +112,24 @@ namespace Nikko.SistGestionPedido.UI.Controllers
 
             }
             
-            IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
-            List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
-                                                             .Select(c => new VendedorViewModel()
-                                                             {
-                                                                 Id = c.Id,
-                                                                 Nombre = c.Nombre,
-                                                             }).ToList();
-            List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
-            {
-                return new SelectListItem()
-                {
-                    Text = i.Nombre.ToString(),
-                    Value = i.Id.ToString(),
-                    Selected = false
-                };
-            });
+            //IQueryable<Vendedor> queryVendedorSQL = await _vendedorService.ObtenerTodos();
+            //List<VendedorViewModel> lstVendedorViewModel = queryVendedorSQL
+            //                                                 .Select(c => new VendedorViewModel()
+            //                                                 {
+            //                                                     Id = c.Id,
+            //                                                     Nombre = c.Nombre,
+            //                                                 }).ToList();
+            //List<SelectListItem> items = lstVendedorViewModel.ConvertAll(i =>
+            //{
+            //    return new SelectListItem()
+            //    {
+            //        Text = i.Nombre.ToString(),
+            //        Value = i.Id.ToString(),
+            //        Selected = false
+            //    };
+            //});
             //items.Add (new SelectListItem {Text ="Seleccione..",Value="0", Disabled=true, Selected=true });
-            ViewBag.Items = items;
+            //ViewBag.Items = items;
 
             return View("Create");
         }

@@ -37,12 +37,7 @@
                     <input asp-for="Telefono" class="form-control" />
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
-                <div>
-                    <div class="col-md-12">
-                        Vendedor<Br />
-                        @Html.DropDownList("IdVendedor", items, "Selecciona..",new {@class = "form-control-mandatory", style="width:100%;height:35px", @required="Required"})
-                    </div>
-                </div>
+                
                 <p></p>
                 <div class="form-group">
                     <input type="submit" value="Crear" class="btn btn-primary" />
